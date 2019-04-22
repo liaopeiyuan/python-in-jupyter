@@ -19,9 +19,7 @@ for path, encoded in file_data.items():
 def run(command):
     os.system('export PYTHONPATH=${PYTHONPATH}:/kaggle/working && ' + command)
 
-
+#Sample usage
 run('python setup.py develop --install-dir /kaggle/working')
-run('python -m src.make_folds')
-run('python -m src.main train model_resnet152_2 --fold 2 --n-epochs 25')
-run('python -m src.main predict_test model_resnet152_2')
-run('python -m src.make_submission model_resnet152_2/test.h5 submission.csv --threshold 0.1')
+run('python -m src.sample')
+
